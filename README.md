@@ -6,7 +6,7 @@ User has to specify addresses to parse, project and model ID and a token contain
 
 ## python.py
 
-The python sample uses requests library to send request. It's the basic usage of the API.
+The python sample uses requests library to send request. It's the basic usage of the API. When execute the script, please provide a valid A3I token. For example `python python.py a3i_token`
 
 ## python_excel_file.py
 
