@@ -1,4 +1,5 @@
 import requests
+import sys
 
 inputToken = sys.argv[1]
 
