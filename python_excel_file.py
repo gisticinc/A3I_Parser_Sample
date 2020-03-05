@@ -48,7 +48,6 @@ url = 'https://api.linearbench.com/a3i/parse'
 # 1. Addresses to parse in an array
 # 2. Project and Model to use. The default is a trained model.
 # 3. Always set "unmagnizedOnly" to false
-print(addresses)
 data = {
     'addresses': json.dumps(addresses),
     'modelId':295,
@@ -66,8 +65,14 @@ headers = {
 # Send request
 r = requests.post(url, data = data, headers = headers)
 
+# Check error
+if r.status_code != 200:
+    print 'The parse process failed: ' + r.json()
+    exit()
+
 # Clean result data
 resultJson = json.loads(r.content)
+print r.status_code
 
 # Create result sheet
 wb2 = xlwt.Workbook()
