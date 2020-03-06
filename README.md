@@ -6,6 +6,8 @@ An API key is required to use the services.  You may contact Gistic for the key.
 
 The python scripts are developed for Python 2.
 
+Each http request only takes top 1000 addresses. If you have more records to parse, please make multiple requests.
+
 # Sample 1 - python.py
 
 Shows the basic use of the service. Here is the sample command line 
